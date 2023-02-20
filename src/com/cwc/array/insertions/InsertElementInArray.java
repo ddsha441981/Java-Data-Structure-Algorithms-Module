@@ -2,6 +2,10 @@ package com.cwc.array.insertions;
 
 public class InsertElementInArray {
 
+    //Index : Position + 1
+    //Position : Index - 1
+
+
     public static void insertElement(char[] ar, int position,char value){
         for(int i = ar.length-1; i>position;i--){
             //Moving each element one position to its right
