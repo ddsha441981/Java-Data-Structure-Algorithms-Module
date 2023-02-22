@@ -100,27 +100,7 @@ public class PairGroupArray {
         return lastValue;
     }
 
-    private static void swapNumbers() {
-        int num1 = 3;
-        int num2 = 5;
-        System.out.println("Before Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
-        int temp = 0;
-        temp = num1;
-        num1 = num2;
-        num2 = temp;
-        System.out.println("After Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
-    }
 
-    private static void swapWithoutUseThirdVariable(){
-        int num1 = 3;
-        int num2 = 5;
-        System.out.println("Before Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
-        num1 = num1 + num2;
-        num2 = num1 - num2;
-        num1 = num1 - num2;
-        System.out.println("After Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
-
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -141,8 +121,6 @@ public class PairGroupArray {
 //        System.out.println("Second Max Number is : " + findSecondMax(arr));
 //        System.out.println("First Repeating value is : " + findFirstRepeatingValue(arr));
 //        System.out.println("Last Repeating element is : " + findLastRepeatingValue(arr));
-        //swapNumbers();
-        swapWithoutUseThirdVariable();
 
     }
 
