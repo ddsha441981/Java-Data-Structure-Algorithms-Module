@@ -75,6 +75,53 @@ public class PairGroupArray {
         return secondMax;
     }
 
+    private static int findFirstRepeatingValue(int[] arr){
+        int n = arr.length;
+        for (int i = 0; i<n; i++){
+            for(int j = i + 1; j<n; j++){
+                if(arr[i] == arr[j]){
+                   return arr[i];//found
+                }
+            }
+        }
+        return -1;//not found
+    }
+
+    private static int findLastRepeatingValue(int[] arr){
+        int n = arr.length;
+        int lastValue = -1;
+        for(int i = 0; i<n; i++ ){
+            for (int j = i +1; j<n; j++){
+                if(arr[i] == arr[j]){
+                    lastValue = arr[i];
+                }
+            }
+        }
+        return lastValue;
+    }
+
+    private static void swapNumbers() {
+        int num1 = 3;
+        int num2 = 5;
+        System.out.println("Before Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
+        int temp = 0;
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+        System.out.println("After Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
+    }
+
+    private static void swapWithoutUseThirdVariable(){
+        int num1 = 3;
+        int num2 = 5;
+        System.out.println("Before Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
+        num1 = num1 + num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
+        System.out.println("After Swap Numbers " +" num1 : "+ num1 + " Num2 : " + num2 );
+
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter arrays size");
@@ -85,14 +132,21 @@ public class PairGroupArray {
         for (int i = 0;i<n;i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.println("Enter target sum value");
-        int target = sc.nextInt();
+//        System.out.println("Enter target sum value");
+//        int target = sc.nextInt();
 
-        System.out.println(checkTwoPairNumber(arr, target));
-        System.out.println(checkTripalPairNumber(arr, target));
-        System.out.println("Unique Number is : " + checkUniqueNumber(arr));
-        System.out.println("Second Max Number is : " + findSecondMax(arr));
+//        System.out.println("Two Number Pair : " + checkTwoPairNumber(arr, target));
+//        System.out.println("Tripal Number Pair : " + checkTripalPairNumber(arr, target));
+//        System.out.println("Unique Number is : " + checkUniqueNumber(arr));
+//        System.out.println("Second Max Number is : " + findSecondMax(arr));
+//        System.out.println("First Repeating value is : " + findFirstRepeatingValue(arr));
+//        System.out.println("Last Repeating element is : " + findLastRepeatingValue(arr));
+        //swapNumbers();
+        swapWithoutUseThirdVariable();
+
     }
+
+
 
 
 }
