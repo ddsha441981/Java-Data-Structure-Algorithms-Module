@@ -1,4 +1,4 @@
-package com.cwc.array.operations;
+package com.cwc.datastructure.array.operations;
 
 import java.util.Scanner;
 

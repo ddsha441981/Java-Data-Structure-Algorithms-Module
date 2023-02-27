@@ -1,4 +1,4 @@
-package com.cwc.array.insertions;
+package com.cwc.datastructure.array.insertions;
 
 public class InsertElementInArray {
 

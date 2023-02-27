@@ -1,4 +1,4 @@
-package com.cwc.array.operations;
+package com.cwc.datastructure.array.operations;
 
 public class ArraysOperations {
 

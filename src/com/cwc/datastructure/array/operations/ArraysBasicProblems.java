@@ -1,4 +1,4 @@
-package com.cwc.array.operations;
+package com.cwc.datastructure.array.operations;
 
 public class ArraysBasicProblems {
 
@@ -48,15 +48,59 @@ public class ArraysBasicProblems {
         return ans;
     }
 
+    private static void reverseArrayInPlace(int[] arr){
+        int i = 0; int j = arr.length-1;
+        while(i<j){ //i is indexed of 0 and j is last indexed of array
+            swapArrayElements(arr,i,j);
+            i++;
+            j--;
+
+        }
+    }
+
+    private static void swapArrayElements(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[i] =  arr[j];
+        arr[j] = temp;
+    }
+
+    private static void printArrayTable(int[] arr){
+        int result = 0;
+        for (int i = 0;i<=arr.length; i++){
+            for (int j = 1; j<=10; j++){
+                 result = i * j;
+                System.out.print(result + " ");
+            }
+            System.out.println();
+        }
+
+
+    }
+
+    private static void checkEvenNumber(int[] arr){
+        int n = arr.length;
+        int result = 0;
+        for (int i = 0; i<n; i++){
+            if(i / 2 == 0){
+                result = i;
+            }
+        }
+        System.out.println(result);
+    }
+
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
         int num1 = 3;
         int num2 = 5;
         //swapNumbers(num1,num2);
        //swapWithoutUseThirdVar(num1,num2);
-        int[] ans = reverseArray(arr);
-        printArray(ans);
-
+//        int[] ans = reverseArray(arr);
+//        printArray(ans);
+//        reverseArrayInPlace(arr);
+//        printArray(arr);
+//        printArrayTable(arr);
+        checkEvenNumber(arr);
     }
 
 
